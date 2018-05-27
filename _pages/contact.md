@@ -1,7 +1,7 @@
 ---
 permalink: contact/
 author_profile: true
-layout: single
+layout: splash
 ---
 
 <img src="assets/images/contact.jpg" width="50%">
