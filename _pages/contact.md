@@ -11,7 +11,9 @@ Thank you for visiting my blog! I hope the session was fruitful.
 If you have found anything useful, feel free to share the word.
 
 ## Contact Me
-Brainstorming of ideas? Or looking to work together? Feel free to contact me via LinkedIn. 
+I am currently seeking for career opportunities in data science related positions, and can be contacted via LinkedIn on the left.
+
+Looking to discuss ideas instead? Or just for a simple chat? Feel free to contact me as well. 
 
 Alternatively, you may use the form below and I will return to you at the soonest possible.
 
