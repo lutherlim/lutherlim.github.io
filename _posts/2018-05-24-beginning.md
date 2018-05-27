@@ -3,7 +3,7 @@ title: Stepping into the world of Data Science
 date: 2018-05-24 18:00:00 +08:00
 ---
 
-# It's not the end, it's just the beginning
+### It's not the end, it's just the beginning
 
 These are the parting words from our beloved instructor at General Assembly. Having completed the intensive 12-weeks data science boot camp, I can't help but be excited in what the future entails.
 
