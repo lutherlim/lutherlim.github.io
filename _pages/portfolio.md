@@ -8,7 +8,7 @@ header:
   cta_label: 
   cta_url: 
   caption: 
-excerpt: '\-- Every Project is A Step Forward --\"'
+excerpt: '\-- Every Project is A Step Forward --\'
 feature_row:
   - image_path: /assets/images/grocer.jpg
     alt: "Capstone Project"
