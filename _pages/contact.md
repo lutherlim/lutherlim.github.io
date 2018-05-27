@@ -6,14 +6,14 @@ layout: single
 
 <img src="/assets/images/contact.jpg" width="100%">
 
-Thank you for visiting my blog! I hope you have found the session fruitful.
+Thank you for visiting my blog! I hope the session was fruitful.
 
-If you found anything useful, feel free to share the word.
+If you have found anything useful, feel free to share the word.
 
 ## Contact Me
-Brainstorming of ideas, or looking to work together? Either way, feel free to contact me via LinkedIn. 
+Brainstorming of ideas? Or looking to work together? Feel free to contact me via LinkedIn. 
 
-Alternatively, you may use the form below and I will get back to you at the soonest possible.
+Alternatively, you may use the form below and I will return to you at the soonest possible.
 
 <form action="//formspree.io/lutherlim@hotmail.com" method="POST">
 	Name:
