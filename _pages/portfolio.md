@@ -5,7 +5,7 @@ layout: splash
 header:
   overlay_color: "#5e616c"
   overlay_image: "/assets/images/portfolio_banner.png"
-excerpt: \-- Every Project is a Step Forward --\
+excerpt: \-- Every Project is a Step Forward\ --
 feature_row:
 - image_path: "/assets/images/grocer.jpg"
   alt: Capstone Project
