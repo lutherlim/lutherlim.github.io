@@ -1,10 +1,10 @@
 ---
 permalink: contact/
 author_profile: true
-layout: splash
+layout: single
 ---
 
-<img src="assets/images/contact.jpg" width="50%">
+<img src="/assets/images/contact.jpg" width="50%">
 
 Thank you for visiting my blog! I hope you have found the session fruitful.
 If you found anything useful, feel free to share the word.
