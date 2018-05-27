@@ -20,7 +20,7 @@ title                    : "Data is the new science"
 title_separator          : "-"
 name                     : "Luther Lim"
 description              : "Tales of my Data Journey"
-url                      : "https://lutherlim.github.io"
+url                      : "https://lutherlim.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -101,7 +101,7 @@ analytics:
 # Site Author
 author:
   name             : "Luther Lim"
-  avatar           : "/assets/images/luther.jpg"
+  avatar           : "assets/images/luther.jpg"
   bio              : "Data Scientist | Inquisitive Thinker | Traveller"
   location         : "Singapore"
   email            : "lutherlim@htomail.com"
