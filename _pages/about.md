@@ -5,8 +5,7 @@ layout: single
 toc: true
 toc_label: ON THIS PAGE
 ---
-
-## -- About Me --
+##
 Aspiring data scientist seeking to drive and create value through data. Inquisitive and keen learner looking to explore new ideas and challenge myself.
 
 Abled Python coder with SQL, statistical modeling and machine learning skills, and avid believer that data is the new raw material for businesses.
