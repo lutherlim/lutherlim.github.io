@@ -51,8 +51,8 @@ Below illustrate how a filter works. We will first arbitrarily define a filter o
 
 Depending on the weights assigned, different feature maps will be obtained. Generally, low level filters work as edge detectors, and as we go higher, they tend to capture high level concepts like objects and faces.
 
-<figure class="center" id="id-RWxiA"><img alt="visualized convolutional filters 1" class="iimagesfigure_2png" src="https://d3ansictanv2wj.cloudfront.net/Figure_2-fec5d4f15a60986e8965db5631d00613.png">
-<figcaption><span class="label">Filter Examples</span></figcaption>
+<figure class="center" id="id-RWxiA"><<img src="/assets/images/convolution.gif" width="50%">
+<figcaption><span class="label"></span>Filter Examples</figcaption>
 </figure>
 
 ### 2.2 Non-Linear Activation
