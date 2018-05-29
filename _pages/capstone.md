@@ -8,7 +8,7 @@ toc_label: ON THIS PAGE
 ---
 <img src="/assets/images/cap1.jpg" width="100%">
 
-## 1. Problem Statement
+## 1. How It Started
 
 Ever came across news headlines like listeria tainted melons? Or wondered how else can you prepare a particular vegetable? Or attempt to locate a specific product in a hypermarket?
 
@@ -24,11 +24,9 @@ What is in for the supermarket then? Afterall, there is no free lunch. By virtue
 
 <!-- In today's technologial landscape, we are able to leverage techniques such as **deep learning** to easily classify images or even speech. For this use case, we will make use of **Convolutional Neural Networks** (CNN) and transfer learning to help with the classification of groceries. This can then add value to supermarkets in the form of helping grocers find their groceries in a shorter time. A proposal might be to add kiosks around the supermarket with the image classifer. Grocers will only need to scan a photo or image of their grocery and the kiosk will return the row and column locations of the particular grocery. -->
 
-<img src="/assets/images/cap2.jpg" width="100%">
-Yay, candy can now be found easily!
-
 ## 2. Understanding the Convolutional Neutral Network
 <img src="/assets/images/CNN.png" width="100%">
+
 
 Before we go on further on how Joe is built, lets take some time to understand what a Convolutional Neural Network (CNN) is, the underlying mechanism behind an image classifier like Joe. CNN is a form of deep learning where images are broken down into number matrices and fed through layers for analysis in a forward direction. 
 
@@ -42,7 +40,7 @@ In essence, a CNN is made up of 4 main operations:
 
 <img src="/assets/images/CNN.png" width="100%">
 
-#### 2.1 Convolution
+### 2.1 Convolution
 For any machine learning problem, a computer can only understands things in a numerical form, and image classification is no exception. In any coloured image, each pixel can be described by the degree of red, green and blue colour (each represented by a number in the range of 0 to 255) in it. As such, a 512 x 512 pixels image can simply be represented as a matrix of size 512 x 512 x 3, where 3 refers to the number of colour channels. 
 
 And here comes the convolution, which is actually referring to a filter of size N x N used to slide across our image matrix. Think of a filter like a camera lens. There are many different lenses out in the market, and each has its own purpose. For e.g. a macro lens is use to capture small items, a wide angle lens is for panoramic shots, a zoom lens is for capturing items far away. Likewise, each filter in a CNN works with the specific purpose of extracting a unique feature from an image.
@@ -53,29 +51,30 @@ Below illustrate how a filter works. We will first arbitrarily define a filter o
 
 Depending on the weights assigned, different feature maps will be obtained. Generally, low level filters work as edge detectors, and as we go higher, they tend to capture high level concepts like objects and faces.
 
-.center[
-![My image](https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-<img src="/assets/images/filters.png" width="100%">
-.caption[
-**Fig. 1:** Image caption
-]
-]
+<div class="fig figcenter fighighlight">
+  <img src="/assets/images/filters.png" width="50%">
+  <div class="figcaption">
+    <b>Example of filters</b>
+  </div>
+</div>
 
-#### 2.2 Non-Linear Activation
+### 2.2 Non-Linear Activation
 
 Activation functions are an extremely important elements of neural networks. They basically decide whether a pixel in a feature should be passed on deeper in a network or "killed". One of the most commonly used activation function is the Rectified Linear Unit (ReLU), which is an element wise operation (applied per pixel) and replaces all negative values in the feature map by zero. 
 
 ReLU's popularity stems from the fact it is computationally easier to calculate, resulting in faster training time, and acheiving the objective of introducing non-linearity in the model. I will not go into the significance of non-linearity here, if you are interested this [page]() has provided quite a good explanation. 
 
-#### 2.3 Pooling
+### 2.3 Pooling
 
 Image matrices tend to be large, and the situation quickly becomes unmanageable as image count and sizes grow larger. 
 
-To counter this, pooling techniques are often applied to reduce the dimension of our feature maps, while retaining the most important information. The most common pooling technique used is max pooling due to its performance. In max pooling, a N x N matrix is slided through our feature map, and only the largest element is retained for every step. The figure below illustrates how max pooling is performed with a 2x2 matrix:
+To counter this, pooling techniques are often applied to reduce the dimension of our feature maps, while retaining the most important information. The most common pooling technique used is max pooling due to its performance. 
 
-<img src="/assets/images/maxpool.gif" width="100%">
+In max pooling, a N x N matrix is slided through our feature map, and only the largest element is retained for every step. The figure below illustrates how max pooling is performed with a 2x2 matrix:
 
-#### 2.4 Fully Connected Layer
+<img src="/assets/images/maxpool.gif" width="70%">
+
+### 2.4 Fully Connected Layer
 The final part to a CNN is always a Fully Connected Layer. The term “fully connected” implies that every neuron in the previous layer is connected to every neuron on the next. The Fully Connected layer is a traditional Multi Layer Perceptron that uses a softmax activation function in the output layer. This softmax activation function works by assigning a probability to each of the training category, such that it adds up to 1. The category with the highest probability will then be the prediction.  
 
 Think of this part like a puzzle. Prior to this, the features extracted can be thought of as pieces to the puzzle. One then has to join all of these pieces before you can get and comprehend the image.
@@ -83,18 +82,18 @@ Think of this part like a puzzle. Prior to this, the features extracted can be t
 Now that we have an understanding on how CNN works, its time to move on to our star today Joe. Read on to find out how he is built!
 
 ## 3. Methodology
-The approach to building Joe can be split into 4 main categories:
+The approach to building Joe can be split into 4 main parts:
 1. Mining the dataset
 2. Pre-process the images
 3. Buildning and training the CNN
 4. Evaluating results
 
-#### 3.1 Dataset
+### 3.1 Dataset
 The dataset used for this project are obtained from 2 sources:
-1.  [VegFru](http://openaccess.thecvf.com/content_ICCV_2017/papers/Hou_VegFru_A_Domain-Specific_ICCV_2017_paper.pdf) database from University of Science and Technology China.  
-2. Web scraped from the internet (Primary Source)
+* [VegFru](http://openaccess.thecvf.com/content_ICCV_2017/papers/Hou_VegFru_A_Domain-Specific_ICCV_2017_paper.pdf) database from University of Science and Technology China.  
+* Web scraped from the internet (Primary Source)
 
-A total of 15 fruits and vegetables are then selected for training Joe:
+A total of 15 fruits and vegetables are selected for training Joe:
 1. Apple
 2. Asparagus
 3. Banana
@@ -111,10 +110,12 @@ A total of 15 fruits and vegetables are then selected for training Joe:
 14. Spinach
 15. Strawberry
 
-Each category contains at least 2,000 images to ensure sufficient representation, and a grand total of 37,000 images are used. It is highly recommended that your images contain a good mix of clean and noisy images. The rationale behind is clean images will train the machine to pinpoint the object of interest, whereas noisy images will train the machine for real world application.
+Each category contains at least 2,000 images to ensure sufficient representation, for a grand total of 37,000 images used. 
+
+It is highly recommended that your images contain a good mix of clean and noisy images. The rationale behind is clean images will train the machine to pinpoint the object of interest, whereas noisy images will train the machine for real world application.
 
 Sample Images:
-<img src="/assets/images/sample.jpg" width="100%">
+<img src="/assets/images/sample.png" width="100%">
 
 Main packages used for Joe:
 1. Numpy
@@ -124,7 +125,8 @@ Main packages used for Joe:
 6. sci-kit learn
 7. keras with tensorflow-gpu backend
 
-#### 3.2 Preprocessing images
+
+### 3.2 Preprocessing Images
 The preprocessing stage can be split into 3 main steps:
 1. Manual review and removal of irrelevant images
 2. Cropping and renaming of images with Python for easy reference
@@ -132,11 +134,12 @@ The preprocessing stage can be split into 3 main steps:
 
 For point 3, 100 images are randomly selected from each category for testing. A 80/20 split is done randomly on the remaining images for training and validation. I shall not go into details here, and the codes to above can be found on my github.
 
+
 ## 4. Building Joe with Keras
 
 Now its time to go into the architecture of Joe!
 
-#### 4.1 Defining Joe's architecture
+### 4.1 Defining Joe's Architecture
  
 ```python
 input_shape = (128, 128, 3)
@@ -175,79 +178,21 @@ model.compile(loss='categorical_crossentropy', optimizer='adam',metrics=["accura
 ```
 
 To understand the model above, each Convolution2D() defines a single convolution layer. Using the first layer as an example:
-1. 32 refers to the number of filters used
-2. (3,3) refers to the size of the filter
-3. Activation function to use is ReLU
-4. Input shape of (128,128,3) refers to the width, height, number of colour channels of the input image
+* 32 refers to the number of filters used
+* (3,3) refers to the size of the filter
+* Activation function to use is ReLU
+* Input shape of (128,128,3) refers to the width, height, number of colour channels of the input image
 
 Notice that there is a parameter called padding. Recall the earlier illustration on filters in section 2.1, the resulting feature map is always smaller than that of the original. A 'same' padding will ensure the input and output of the convolution layer to be of the same size through a technique called zero padding.
 
 We have also added various Dropout layers in our Keras model. At each dropout layer, a portion of the features extracted will be randomly discarded based on the fraction defined. The Dropout layer acts like a regulariser to prevent overfitting of Joe.
 
-```python
-# Viewing model_configuration
 
-model.summary()
-```
+### 4.2. Training Joe
 
-    _________________________________________________________________
-    Layer (type)                 Output Shape              Param #   
-    =================================================================
-    conv2d_1 (Conv2D)            (None, 128, 128, 32)      896       
-    _________________________________________________________________
-    batch_normalization_1 (Batch (None, 128, 128, 32)      128       
-    _________________________________________________________________
-    conv2d_2 (Conv2D)            (None, 128, 128, 32)      9248      
-    _________________________________________________________________
-    batch_normalization_2 (Batch (None, 128, 128, 32)      128       
-    _________________________________________________________________
-    max_pooling2d_1 (MaxPooling2 (None, 64, 64, 32)        0         
-    _________________________________________________________________
-    dropout_1 (Dropout)          (None, 64, 64, 32)        0         
-    _________________________________________________________________
-    conv2d_3 (Conv2D)            (None, 64, 64, 64)        18496     
-    _________________________________________________________________
-    batch_normalization_3 (Batch (None, 64, 64, 64)        256       
-    _________________________________________________________________
-    conv2d_4 (Conv2D)            (None, 64, 64, 64)        36928     
-    _________________________________________________________________
-    batch_normalization_4 (Batch (None, 64, 64, 64)        256       
-    _________________________________________________________________
-    max_pooling2d_2 (MaxPooling2 (None, 32, 32, 64)        0         
-    _________________________________________________________________
-    dropout_2 (Dropout)          (None, 32, 32, 64)        0         
-    _________________________________________________________________
-    conv2d_5 (Conv2D)            (None, 32, 32, 128)       73856     
-    _________________________________________________________________
-    batch_normalization_5 (Batch (None, 32, 32, 128)       512       
-    _________________________________________________________________
-    conv2d_6 (Conv2D)            (None, 32, 32, 128)       147584    
-    _________________________________________________________________
-    batch_normalization_6 (Batch (None, 32, 32, 128)       512       
-    _________________________________________________________________
-    max_pooling2d_3 (MaxPooling2 (None, 16, 16, 128)       0         
-    _________________________________________________________________
-    dropout_3 (Dropout)          (None, 16, 16, 128)       0         
-    _________________________________________________________________
-    flatten_1 (Flatten)          (None, 32768)             0         
-    _________________________________________________________________
-    dense_1 (Dense)              (None, 256)               8388864   
-    _________________________________________________________________
-    batch_normalization_7 (Batch (None, 256)               1024      
-    _________________________________________________________________
-    dropout_4 (Dropout)          (None, 256)               0         
-    _________________________________________________________________
-    dense_2 (Dense)              (None, 15)                3855      
-    =================================================================
-    Total params: 8,682,543
-    Trainable params: 8,681,135
-    Non-trainable params: 1,408
-    ________________________________________________________________
-    
+Keras has provided a very useful ImageDataGenerator class that defines the configuration for image data preparation and augmentation. This allows images to be augmented real time on the fly before being pass into the CNN, which has an effect of artificially increasing your dataset. 
 
-#### 4.2. Training Joe
-
-Keras has provided a very useful ImageDataGenerator class that defines the configuration for image data preparation and augmentation. This allows images to be augmented real time on the fly before being pass into the CNN, which has an effect of artificially increasing your dataset. Each specification defined this class can potentially increase your dataset by 100%, which is especially useful when your dataset is small. For a full list of options, you may refer to [Keras documentation](https://keras.io/preprocessing/image/).
+Each specification defined this class can potentially increase your dataset by 100%, which is especially useful when your dataset is small. For a full list of options, you may refer to [Keras documentation](https://keras.io/preprocessing/image/).
 
 ```python
 train_datagen = ImageDataGenerator(rescale = 1./255,
@@ -281,10 +226,10 @@ hist = model.fit_generator(training_set,
                            callbacks = [csv_log, checkpointer])
 ```
 
-#### 4.3 Model Evaluation
-After training, we will test our model on the 1,500 test images selected during the pre-processing stage, which are images Joe has never seen before. This is crucial as it checks if our model is good at generalising new images and not only on images it is trained on i.e. overfitting.
+### 4.3 Model Evaluation
+After training, we will test our model on the 1,500 test images selected during the pre-processing stage, which are images Joe has never seen before. This is crucial as it checks if our model is good at generalising new images and not just on images it is trained on i.e. overfitting.
 
-We will chose the model weights at epoch 125 for the test as it has the best loss and accuracy, and use the f1-score as the key metric to evaluate Joe.
+We will choose the model weights at epoch 125 for the test as it has the best loss and accuracy, and use the f1-score as the key metric to evaluate Joe.
 
 **Confusion Matrix:**
 ![png](cap/output_18_0.png)
@@ -318,11 +263,9 @@ Not bad at all! Joe scored a astonishing 97% in test accuracy! I have taken a st
 
 We will next attempt to build Joe via transfer learning to see if a better f1-score can be obtain. Transfer learning is the process of utilising knowledge from a particular task/domain to model for another task/domain, in our case through the use of pre-trained model.
 
-<img src="/assets/images/cap10.png" width="100%">
-
 Luckily for us, Keras has a [list](https://keras.io/applications/) of pre-trained models for our implementation. In this project, we will utilise Google's Inception_V3 model and retrain the last layer of the model to classify our 15 groceries. 
 
-#### 5.1 Defining the architecture
+### 5.1 Defining the architecture
 Retraining the model is as simple as loading up the model in your terminal, and specifying the images that you wish to classify.
 
 ```python
@@ -355,12 +298,11 @@ model.compile(optimizer='rmsprop', loss='categorical_crossentropy')
 
 Likewise, we call on the ImageDataGenerator class from Keras before training the model using the fit generator method.
 
-#### 5.2 Model Evaluation
+### 5.2 Model Evaluation
 **Confusion Matrix:**
 ![png](cap/output_15_0.png)
 
 **Classification report**
-
                    precision    recall  f1-score   support
     
             Apple       0.87      0.83      0.85       100
@@ -395,8 +337,8 @@ Sadly, this model only gave us a f1-score of 91%.
     - Upon investigation, although Inception V3 was trained on millions of images, only 5 of our classes were represented.  
     - One way to overcome this will be to train more layers instead of only the last in the model to ensure representation of the other classes
 
-3. Business use case
-    Both the Transfer Learning model and Keras model have their pros and cons. Some of their advantages are as follows: 
+3. **Business use case**
+    - Both the Transfer Learning model and Keras model have their pros and cons. Some of their advantages are as follows: 
 
 * **Keras Model**
     - Full control of hyper-parameters
@@ -408,11 +350,11 @@ Sadly, this model only gave us a f1-score of 91%.
     
    From a business perspective, it is important to consider whether there is sufficient time to develop the model, or whether accuracy is preferred over speed and utility.
     
-3. **Other models**
+4. **Other models**
     Support Vector Machines, Fuzzy measures and Genetic Algorithms exist to classify images. But due to the time constraints of the capstone project, we are only able to explore deep learning, which is by far, out performing the other algorithms according to various research papers. It is still important to give the other models a try for a more in-depth comparison.
 
-## 8. Final words and future work
-That's all for now. I do hope you enjoy reading this and manage to have some takeaways.
+## 7. Final words and future work
+That's all for now. I do hope you had enjoy reading this and manage to have some takeaways.
 
 Some future work on this that I am currently exploring:
 1. Explore object detection techniques where multiple items can be classified in a single image
