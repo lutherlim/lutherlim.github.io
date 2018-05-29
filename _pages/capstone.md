@@ -51,9 +51,13 @@ Below illustrate how a filter works. We will first arbitrarily define a filter o
 
 Depending on the weights assigned, different feature maps will be obtained. Generally, low level filters work as edge detectors, and as we go higher, they tend to capture high level concepts like objects and faces.
 
-<figure class="center" id="id-RWxiA"><<img src="/assets/images/filters.png" width="50%">
-<figcaption><span class="label"></span>Filter Examples</figcaption>
-</figure>
+<div class="fig figcenter fighighlight">
+  <img src="/assets/images/filters.png" width="50%">
+  <div class="figcaption">
+    Some examples of filters
+  </div>
+</div>
+
 
 ### 2.2 Non-Linear Activation
 
