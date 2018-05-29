@@ -52,6 +52,7 @@ Below illustrate how a filter works. We will first arbitrarily define a filter o
 Depending on the weights assigned, different feature maps will be obtained. Generally, low level filters work as edge detectors, and as we go higher, they tend to capture high level concepts like objects and faces.
 
 Some examples of filters:
+
 <img src="/assets/images/filters.png" width="50%">
 
 Effect of above filters:
@@ -115,7 +116,7 @@ Each category contains at least 2,000 images to ensure sufficient representation
 It is highly recommended that your images contain a good mix of clean and noisy images. The rationale behind is clean images will train the machine to pinpoint the object of interest, whereas noisy images will train the machine for real world application.
 
 Sample Images:
-<img src="/assets/images/sample.png" width="100%">
+<img src="/assets/images/Sample.png" width="100%">
 
 Main packages used for Joe:
 1. Numpy
