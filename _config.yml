@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Data is the new science"
+title                    : "Data is the New Science"
 title_separator          : "-"
 name                     : "Luther Lim"
 description              : "Tales of my Data Journey"
@@ -102,7 +102,8 @@ analytics:
 author:
   name             : "Luther Lim"
   avatar           : "assets/images/luther.jpg"
-  bio              : "Data Scientist | Inquisitive Thinker | Traveller"
+  bio              : "Teaching Assistant @ General Assembly SG
+                      Data Scientist | Inquisitive Thinker | Traveller"
   location         : "Singapore"
   email            : "lutherlim@htomail.com"
   uri              : 

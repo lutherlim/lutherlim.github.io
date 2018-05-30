@@ -6,7 +6,7 @@ author_profile: true
 toc: true
 toc_label: ON THIS PAGE
 ---
-<img src="/assets/images/cap1.jpg" width="100%">
+<img src="/assets/images/capstone_banner.jpg" width="100%">
 
 ## 1. How It Started
 
@@ -25,8 +25,6 @@ What is in for the supermarket then? Afterall, there is no free lunch. By virtue
 <!-- In today's technologial landscape, we are able to leverage techniques such as **deep learning** to easily classify images or even speech. For this use case, we will make use of **Convolutional Neural Networks** (CNN) and transfer learning to help with the classification of groceries. This can then add value to supermarkets in the form of helping grocers find their groceries in a shorter time. A proposal might be to add kiosks around the supermarket with the image classifer. Grocers will only need to scan a photo or image of their grocery and the kiosk will return the row and column locations of the particular grocery. -->
 
 ## 2. Understanding the Convolutional Neutral Network
-<img src="/assets/images/CNN.png" width="100%">
-
 
 Before we go on further on how Joe is built, lets take some time to understand what a Convolutional Neural Network (CNN) is, the underlying mechanism behind an image classifier like Joe. CNN is a form of deep learning where images are broken down into number matrices and fed through layers for analysis in a forward direction. 
 
