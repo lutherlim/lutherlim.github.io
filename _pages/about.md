@@ -6,6 +6,8 @@ layout: single
 toc: true
 toc_label: ON THIS PAGE
 ---
+<img src="/assets/images/about_banner.jpg" width="100%">
+
 ## About Me
 Aspiring data scientist seeking to drive and create value through data. Inquisitive and keen learner looking to explore new ideas and challenge myself.
 
