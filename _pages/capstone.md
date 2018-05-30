@@ -302,6 +302,7 @@ Likewise, we call on the ImageDataGenerator class from Keras before training the
 ![png](cap/output_15_0.png)
 
 **Classification report**
+
                    precision    recall  f1-score   support
     
             Apple       0.87      0.83      0.85       100
