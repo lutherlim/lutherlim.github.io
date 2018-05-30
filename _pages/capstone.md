@@ -339,13 +339,13 @@ Sadly, this model only gave us a f1-score of 91%.
 3. **Business use case**
     - Both the Transfer Learning model and Keras model have their pros and cons. Some of their advantages are as follows: 
 
-* **Keras Model**
-    - Full control of hyper-parameters
-    - Full control of trainable features, depth and complexity of the model  
+        * **Keras Model**
+            - Full control of hyper-parameters
+            - Full control of trainable features, depth and complexity of the model  
 
-* **Transfer learning**
-    - Easy to apply
-    - Models from different domains may be applicable to business use cases from differing domains  
+        * **Transfer learning**
+            - Easy to apply
+            - Models from different domains may be applicable to business use cases from differing domains  
     
    From a business perspective, it is important to consider whether there is sufficient time to develop the model, or whether accuracy is preferred over speed and utility.
     
