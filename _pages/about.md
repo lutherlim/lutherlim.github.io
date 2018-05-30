@@ -1,5 +1,5 @@
 ---
-title: &title
+title: &title Test
 permalink: about/
 author_profile: true
 layout: single
