@@ -10,7 +10,7 @@ feature_row:
 - image_path: "/assets/images/grocer.jpg"
   alt: Capstone Project
   title: Capstone Project - G.I.Joe
-  excerpt: In the capstone project, an image classifier is built to classify grocery images. The outputs of the classifier can be integrated in customer service kiosks, warehouse systems and even online grocery platforms.<br>
+  excerpt: In the capstone project, a multiclass image classifier on groceries is built. The outputs of the classifier can be used to drive customer satisfaction and business revenue via delivery of value added services.
   url: "/capstone"
   btn_class: btn--primary
   btn_label: Read More
